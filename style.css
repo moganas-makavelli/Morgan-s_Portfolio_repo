@@ -1,0 +1,62 @@
+/*
+ * This CSS file defines the color variables and general styles for the portfolio.
+ * It is configured to be a permanent dark theme.
+ */
+
+/*
+ * The :root pseudo-class targets the root element of the document, which is the <html> element.
+ * We define our dark theme variables here as the default.
+ */
+:root {
+    --bg-color: #111827;
+    /* gray-900 */
+    --text-color: #f9fafb;
+    /* gray-50 */
+    --card-bg: #1f2937;
+    /* gray-800 */
+    --border-color: #374151;
+    /* gray-700 */
+    --shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px 0 rgba(255, 255, 255, 0.06);
+    --primary-color: #6366f1;
+    /* indigo-500 */
+    --secondary-color: #a5b4fc;
+    /* indigo-200 */
+}
+
+/*
+ * This section applies the CSS variables to the HTML elements.
+ * The colors are permanently set to the dark theme.
+ */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Other general styling for elements not covered by Tailwind */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
